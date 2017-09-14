@@ -104,7 +104,6 @@ def main():
             bandit_command = ['bandit'] + step['args']
 
             try:
-                Log.info(step['message'])
                 output = subprocess.check_output(bandit_command)
             except subprocess.CalledProcessError as e:
                 output = e.output
